@@ -1,0 +1,3 @@
+*.py linguist-language=python
+*.spec linguist-language=python
+*.e linguist-language=E
