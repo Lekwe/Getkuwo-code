@@ -11,4 +11,4 @@
 """
 import os
 
-os.startfile(r"F:\Desktop\music\干饭人之歌-张老板阿.mp3")
+os.system(r'start http://1.1.1.1')
