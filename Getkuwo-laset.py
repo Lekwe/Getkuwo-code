@@ -211,7 +211,7 @@ while True:
                 else:
                     a = 1
 
-                url = "http://www.kuwo.cn/api/v1/www/music/playUrl?mid=15651705&type=convert_url3&httpsStatus=1&reqId=cd404260-eeb3-11ec-a8d6-a546fe644e18".format(
+                url = "http://www.kuwo.cn/api/v1/www/music/playUrl?mid={}&type=convert_url3&httpsStatus=1&reqId=cd404260-eeb3-11ec-a8d6-a546fe644e18".format(
                     rid)
                 req = requests.get(url=url, headers=headers).text
                 pe1 = req.split('"')
@@ -338,6 +338,7 @@ while True:
                     songname = json.loads(res.text).get('data').get('songinfo').get('songName')
                     artist = json.loads(res.text).get('data').get('songinfo').get('artist')
                     # print('ok')
+                    print(songurl)
                     os.system(
                         'start https://gk.lps-mc.xyz?play={}?name={}?artist={}?img={}'.format(
                             songurl, str(songname).replace(' ', '').replace('?', '？'), str(artist).replace(' ', '-').replace('，', '-').replace('&', ''), https_pic))
